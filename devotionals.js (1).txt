@@ -1,0 +1,51 @@
+// Rev Ezare Daily - Auto-Updating Devotionals
+// HOW IT WORKS: The app picks a devotional based on today's date.
+// Day 1 of month = Devotional 1, Day 2 = Devotional 2, etc.
+// After day 30, it loops back. No manual update needed.
+
+export const devotionals = [
+  { title: "Begin Again in Mercy", verse: "This is the day the Lord has made; we will rejoice and be glad in it.", ref: "Psalm 118:24", body: "Begin gently. There is grace for this day, and strength for what it asks of you. You don't have to carry yesterday into today. Mercy is new this morning." },
+  { title: "You Are Not Behind", verse: "He has made everything beautiful in its time.", ref: "Ecclesiastes 3:11", body: "God is not rushing you. Your pace is not punishment. Trust that what is for you is still unfolding, right on time." },
+  { title: "Peace in the Waiting", verse: "Be still, and know that I am God.", ref: "Psalm 46:10", body: "Waiting is not wasted. In the quiet, God is working in ways you cannot yet see. Breathe. Be still. He is near." },
+  { title: "Strength for Today", verse: "My grace is sufficient for you, for my power is made perfect in weakness.", ref: "2 Corinthians 12:9", body: "You don't need strength for the whole week. You only need grace for today. And today, grace is enough." },
+  { title: "Loved Beyond Measure", verse: "I have loved you with an everlasting love.", ref: "Jeremiah 31:3", body: "Before you did anything, you were loved. Before you fix anything, you are loved. Rest in that love today." },
+  { title: "Light in the Dark", verse: "The light shines in the darkness, and the darkness has not overcome it.", ref: "John 1:5", body: "Even a small light changes a dark room. Your faith, your kindness, your prayer today matters more than you know." },
+  { title: "God Goes Before You", verse: "The Lord himself goes before you and will be with you.", ref: "Deuteronomy 31:8", body: "You are not walking into today alone. God is already there, preparing the way, calming what you fear." },
+  { title: "Rest for the Weary", verse: "Come to me, all you who are weary, and I will give you rest.", ref: "Matthew 11:28", body: "You don't have to hold it all together. Lay it down. Rest is not laziness, it is trust." },
+  { title: "New Mercies", verse: "His mercies never come to an end; they are new every morning.", ref: "Lamentations 3:22-23", body: "Yesterday's mistakes do not define today's story. This morning comes with fresh mercy, fresh hope, fresh start." },
+  { title: "Courage to Begin", verse: "Be strong and courageous, do not be afraid.", ref: "Joshua 1:9", body: "The thing you have been avoiding? Take one small step today. God is with you in the beginning." },
+  { title: "Held in His Hands", verse: "I will never leave you nor forsake you.", ref: "Hebrews 13:5", body: "Even when you feel forgotten, you are held. Even when you feel far, you are found. You are not alone." },
+  { title: "Grace for the Process", verse: "He who began a good work in you will carry it on to completion.", ref: "Philippians 1:6", body: "You are still becoming. God is not disappointed in your progress. He is patient with your process." },
+  { title: "Speak Life", verse: "The tongue has the power of life and death.", ref: "Proverbs 18:21", body: "Speak kindly to yourself today. Speak hope over your day. Your words are seeds, plant good ones." },
+  { title: "Trust in the Storm", verse: "When you pass through the waters, I will be with you.", ref: "Isaiah 43:2", body: "The storm does not mean God left. It means He is closer than ever, holding you through it." },
+  { title: "Joy is Coming", verse: "Weeping may stay for the night, but rejoicing comes in the morning.", ref: "Psalm 30:5", body: "This heaviness will not last forever. Morning is coming. Hold on, joy is on its way." },
+  { title: "You Are Chosen", verse: "You are a chosen people, a royal priesthood.", ref: "1 Peter 2:9", body: "You were not an accident. You were chosen, called, and set apart for purpose. Walk in that today." },
+  { title: "Let Go and Let God", verse: "Cast all your anxiety on him because he cares for you.", ref: "1 Peter 5:7", body: "You were never meant to carry it all. Give it to God today. He can handle what you cannot." },
+  { title: "Faith Over Fear", verse: "God has not given us a spirit of fear, but of power, love and a sound mind.", ref: "2 Timothy 1:7", body: "Fear is loud, but faith is stronger. Choose one brave thought today and let it lead you." },
+  { title: "Provision is Coming", verse: "My God will meet all your needs according to his riches.", ref: "Philippians 4:19", body: "What you need is on its way. God sees the bill, the need, the worry, and He provides." },
+  { title: "Walk in Love", verse: "Above all, love each other deeply.", ref: "1 Peter 4:8", body: "Love is the loudest sermon. Be gentle today. Forgive quickly. Love deeply. Someone needs your kindness." },
+  { title: "Renewed Mind", verse: "Be transformed by the renewing of your mind.", ref: "Romans 12:2", body: "Your thoughts shape your day. Replace one negative thought today with truth. You are becoming new." },
+  { title: "God is Faithful", verse: "Great is your faithfulness.", ref: "Lamentations 3:23", body: "He was faithful yesterday. He is faithful today. He will be faithful tomorrow. You can trust Him." },
+  { title: "Small Steps, Big Faith", verse: "If you have faith as small as a mustard seed...", ref: "Matthew 17:20", body: "You don't need big faith. You just need to use the little you have. Small steps still move mountains." },
+  { title: "He Hears You", verse: "Before they call I will answer.", ref: "Isaiah 65:24", body: "Your prayer was not ignored. Heaven heard you the first time. The answer is already moving." },
+  { title: "Made for More", verse: "For I know the plans I have for you, plans to prosper you.", ref: "Jeremiah 29:11", body: "Your story is not over. There is more hope, more purpose, more life ahead than behind you." },
+  { title: "Peace That Guards You", verse: "The peace of God will guard your hearts and minds.", ref: "Philippians 4:7", body: "Let peace guard you today. You don't have to understand everything to trust God with everything." },
+  { title: "Grace Upon Grace", verse: "From his fullness we have all received grace upon grace.", ref: "John 1:16", body: "There is more grace where that came from. You will not run out. God gives generously, again and again." },
+  { title: "Shine Bright", verse: "You are the light of the world.", ref: "Matthew 5:14", body: "Don't hide your light. Someone is looking for hope, and your smile, your word, your life may be it." },
+  { title: "He Restores", verse: "He restores my soul.", ref: "Psalm 23:3", body: "What feels broken can be restored. What feels lost can be found. God is a restorer of souls." },
+  { title: "Today is a Gift", verse: "Teach us to number our days, that we may gain a heart of wisdom.", ref: "Psalm 90:12", body: "Today is a gift you will never get again. Use it well. Love well. Live well. Thank God for it." },
+];
+
+// THE MAGIC - picks devotional based on today's date
+export function getTodayDevotional() {
+  const today = new Date();
+  const dayOfMonth = today.getDate(); // 1 to 31
+  const index = (dayOfMonth - 1) % devotionals.length;
+  return devotionals[index];
+}
+
+// Also get Verse of the Day - same as devotional verse
+export function getVerseOfDay() {
+  const d = getTodayDevotional();
+  return { verse: d.verse, ref: d.ref };
+}
