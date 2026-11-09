@@ -1,0 +1,2 @@
+# devotionals.j
+Daily devotional 
